@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Tokens Demo</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Study Planner</h1>
+    <p>A small sample page built only from design tokens.</p>
+    <div class="actions">
+      <button class="btn btn-primary">Start session</button>
+      <button class="btn btn-secondary">Add task</button>
+      <button class="btn btn-outline">View history</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>This week</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Mathematics</h3>
+        <p>Practice integration problems, 45 minutes.</p>
+        <button class="btn btn-primary">Open</button>
+      </article>
+      <article class="card card-featured">
+        <h3>Web development</h3>
+        <p>Finish the CSS variables assignment.</p>
+        <button class="btn btn-secondary">Open</button>
+      </article>
+      <article class="card">
+        <h3>Reading</h3>
+        <p>Two chapters before Friday.</p>
+        <button class="btn btn-outline">Open</button>
+      </article>
+    </div>
+
+    <section class="demo">
+      <h2>Change a token</h2>
+      <p>Pick a primary color. The script only changes <code>--color-primary</code>, yet the headings, buttons and card borders all update.</p>
+      <div class="actions">
+        <button class="btn btn-primary" data-color="#1d6fa5">Blue</button>
+        <button class="btn btn-primary" data-color="#2e7d4f">Green</button>
+        <button class="btn btn-primary" data-color="#8a3fb0">Purple</button>
+        <button class="btn btn-primary" data-color="#c0392b">Red</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Changes one variable on :root; every rule using var(--color-primary) updates.
+    document.querySelectorAll("[data-color]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.documentElement.style.setProperty("--color-primary", btn.dataset.color);
+      });
+    });
+  </script>
+</body>
+</html>

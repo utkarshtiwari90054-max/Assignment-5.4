@@ -1,0 +1,25 @@
+/* Design tokens: every reusable value lives here.
+   To restyle the whole page, change a value in this file. */
+:root {
+  /* Colors */
+  --color-primary: #1d6fa5;      /* buttons, headings, card accents */
+  --color-secondary: #e08a1e;    /* secondary buttons, highlights */
+  --color-background: #f4f7fa;   /* page background */
+  --color-surface: #ffffff;      /* card background */
+  --color-text: #1c2733;         /* body text */
+  --color-text-on-color: #ffffff;/* text on primary/secondary buttons */
+
+  /* Spacing */
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 32px;
+
+  /* Font sizes */
+  --font-small: 0.875rem;
+  --font-medium: 1rem;
+  --font-large: 1.5rem;
+  --font-xlarge: 2.25rem;
+
+  /* Other */
+  --radius: 8px;
+}
