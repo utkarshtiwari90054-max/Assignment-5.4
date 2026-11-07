@@ -1,0 +1,106 @@
+/* Components: no raw colours, spacing or font sizes here, only var(...) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: var(--font-medium);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-large) var(--space-medium);
+}
+
+/* Headings */
+h1 {
+  font-size: var(--font-xlarge);
+  color: var(--color-primary);
+  margin-bottom: var(--space-small);
+}
+
+h2 {
+  font-size: var(--font-large);
+  color: var(--color-primary);
+  margin: var(--space-large) 0 var(--space-medium);
+}
+
+h3 {
+  font-size: var(--font-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--space-small);
+}
+
+p {
+  margin-bottom: var(--space-medium);
+}
+
+small, .hint {
+  font-size: var(--font-small);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-size: var(--font-medium);
+  font-family: inherit;
+  padding: var(--space-small) var(--space-medium);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  color: var(--color-text-on-color);
+  cursor: pointer;
+}
+
+.btn-primary   { background: var(--color-primary); }
+.btn-secondary { background: var(--color-secondary); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn:hover { opacity: 0.85; }
+.btn:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--space-medium);
+}
+
+.card {
+  background: var(--color-surface);
+  border-top: 4px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: var(--space-medium);
+}
+
+.card p { margin-bottom: var(--space-small); }
+
+.card-featured {
+  border-top-color: var(--color-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-small);
+}
+
+/* Step 6 demo panel */
+.demo {
+  margin-top: var(--space-large);
+  padding: var(--space-medium);
+  background: var(--color-surface);
+  border: 2px dashed var(--color-secondary);
+  border-radius: var(--radius);
+}
